@@ -32,14 +32,15 @@ module.exports = function(grunt) {
         simplemocha: {
             options: {
                 globals: ['expect'],
-                timeout: 3000,
+                timeout: 6000,
                 ignoreLeaks: false,
                 ui: 'bdd',
                 reporter: 'spec'
             },
             all: { src: ['test/**/*_spec.js'] },
             core: { src: ["test/_spec.js","test/red/**/*_spec.js"]},
-            nodes: { src: ["test/nodes/**/*_spec.js"]}
+            nodes: { src: ["test/nodes/**/*_spec.js"]},
+            storage: { src: ["test/red/runtime/storage/**/*_spec.js"]}
         },
         jshint: {
             options: {

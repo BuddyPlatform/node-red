@@ -204,5 +204,13 @@ module.exports = {
             // Whether or not to include audit events in the log output
             audit: false
         }
+    },
+
+    storageModule: "sql",
+    sql: {
+        name: process.env.MSSQL_DATABASE,
+        username: process.env.MSSQL_USER,
+        password: process.env.MSSQL_PASSWORD,
+        host: process.env.MSSQL_HOST
     }
 }
